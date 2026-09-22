@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TrustLens 🔎
 
-## Getting Started
+### Don't just search. Investigate.
 
-First, run the development server:
+TrustLens is an evidence-focused web research tool that helps users investigate claims by collecting live web results and organizing them into supporting, contradicting, and unclear evidence.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Instead of simply giving a "True" or "False" answer, TrustLens shows the evidence behind a claim and explains how the available sources were classified.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 What is TrustLens?
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The internet contains a huge amount of information, but finding reliable evidence can be difficult.
 
-## Learn More
+TrustLens turns a simple claim into an investigation:
 
-To learn more about Next.js, take a look at the following resources:
+**Claim → Web Research → Evidence Analysis → Evidence Balance → Report**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Example:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+> "Is the iPhone 15 available in India?"
 
-## Deploy on Vercel
+TrustLens searches the web, collects relevant results, analyzes the language and source type, and presents the findings in an easy-to-understand investigation dashboard.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ✨ Features
+
+### 🔎 Live Web Research
+TrustLens searches the web for evidence related to the user's claim.
+
+### 🧠 Evidence Classification
+Search results are organized into:
+
+- Supporting evidence
+- Contradicting evidence
+- Unclear evidence
+
+### 🏛️ Source Intelligence
+TrustLens identifies source types such as:
+
+- Government
+- Academic
+- News
+- General Web
+
+Sources are also given a prototype quality classification based on their domain.
+
+### ⚖️ Evidence Balance
+
+TrustLens calculates an evidence balance using:
+
+- Evidence classification
+- Source quality
+- Source diversity
+
+This is an evidence signal, **not a probability that a claim is true**.
+
+### 📊 Investigation Dashboard
+
+The dashboard provides:
+
+- Investigation summary
+- Evidence categories
+- Source information
+- Evidence explanations
+- Source diversity
+- Methodology and limitations
+
+### 📱 Responsive UI
+
+The interface is designed to work across desktop and mobile screens.
+
+---
+
+## 🏗️ Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- SerpApi
+- Axios
+- Next.js App Router
+
+---
+
+## 🧩 Architecture
+
+```text
+User Claim
+    ↓
+TrustLens Frontend
+    ↓
+Investigation API
+    ↓
+SerpApi
+    ↓
+Live Web Results
+    ↓
+Evidence Analysis API
+    ↓
+Source + Evidence Classification
+    ↓
+Evidence Balance
+    ↓
+Investigation Dashboard
